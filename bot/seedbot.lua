@@ -226,147 +226,114 @@ function create_config( )
     "leave_ban",
     "admin"
     },
-    sudo_users = {110626080,103649648,143723991,111020322,0,tonumber(our_id)},--Sudo users
+    sudo_users = {118208388,1801803152},--Sudo users
     disabled_channels = {},
     moderation = {data = 'data/moderation.json'},
-    about_text = [[Teleseed v2 - Open Source
-An advance Administration bot based on yagop/telegram-bot 
-
-https://github.com/SEEDTEAM/TeleSeed
-
-Our team!
-Alphonse (@Iwals)
-I M /-\ N (@Imandaneshi)
-Siyanew (@Siyanew)
-Rondoozle (@Potus)
-Seyedan (@Seyedan25)
-
-Special thanks to:
-Juan Potato
-Siyanew
-Topkecleon
-Vamptacus
-
-Our channels:
-English: @TeleSeedCH
-Persian: @IranSeed
+    about_text = [[GoH NakhoR BaW :D
 ]],
     help_text_realm = [[
 Realm Commands:
 
 !creategroup [name]
-Create a group
+ساخت گروه
 
 !createrealm [name]
-Create a realm
+ساخت ریلیم
 
 !setname [name]
-Set realm name
+تنظیم نام
 
 !setabout [group_id] [text]
-Set a group's about text
+تنظیم درباره گروه یا ریلیم
 
 !setrules [grupo_id] [text]
-Set a group's rules
+تنظیم قوانین گروه یا ریلیم
 
 !lock [grupo_id] [setting]
-Lock a group's setting
+قفل گروه :|
 
 !unlock [grupo_id] [setting]
-Unock a group's setting
+باز کردن گروه :|
 
 !wholist
-Get a list of members in group/realm
+دریافت لیست ممبر های ریلیم
 
 !who
-Get a file of members in group/realm
-
-!type
-Get group type
+دریافت فایل لیست ممبر های ریلیم
 
 !kill chat [grupo_id]
-Kick all memebers and delete group
+کیک کردن همه کاربران گروهی دیگر
 
 !kill realm [realm_id]
-Kick all members and delete realm
+کیک کردن تمام کاربران ریلیم دیگر
 
 !addadmin [id|username]
-Promote an admin by id OR username *Sudo only
+اضافه کردن ادمین
 
 !removeadmin [id|username]
-Demote an admin by id OR username *Sudo only
+حذف ادمین
 
 !list groups
-Get a list of all groups
+دریافت لیست گروه ها
 
 !list realms
-Get a list of all realms
+دریافت لیست ریلیم ها
 
 !log
-Get a logfile of current group or realm
+گرفتن لاگ فایل
 
 !broadcast [text]
 !broadcast Hello !
-Send text to all groups
-» Only sudo users can run this command
+ارسال متنی به همه گروه ها
 
-!bc [group_id] [text]
-!bc 123456789 Hello !
-This command will send text to [group_id]
-
-» U can use both "/" and "!" 
-
-» Only mods, owner and admin can add bots in group
-
-» Only moderators and owner can use kick,ban,unban,newlink,link,setphoto,setname,lock,unlock,set rules,set about and settings commands
-
-» Only owner can use res,setowner,promote,demote and log commands
+Ninja Tg BoT :)
+Sudo : @NinjaHacker
 
 ]],
     help_text = [[
 Commands list :
 
 !kick [username|id]
-You can also do it by reply
+کیک :|
 
 !ban [ username|id]
-You can also do it by reply
+بن :|
 
 !unban [id]
-You can also do it by reply
+انبن :|
 
 !who
-Members list
+لیست ممبر
 
 !modlist
-Moderators list
+لیست مدیر ها
 
 !promote [username]
-Promote someone
+اضافه کردن مدیر به گروه
 
 !demote [username]
-Demote someone
+حذف مدیر گروه
 
 !kickme
-Will kick user
+سیک شدن :D
 
 !about
-Group description
+دریافت درباره گروه
 
 !setphoto
-Set and locks group photo
+تنظیم عکس گروه
 
 !setname [name]
-Set group name
+تنظیم نام گروه
 
 !rules
-Group rules
+گرفتن قوانین گروه
 
 !id
-Return group id or user id
+ایدی :|
 
 !help
-Get commands list
+گرفتن راهنما
 
 !lock [member|name|bots|leave] 
 Locks [member|name|bots|leaveing] 
@@ -375,58 +342,41 @@ Locks [member|name|bots|leaveing]
 Unlocks [member|name|bots|leaving]
 
 !set rules [text]
-Set [text] as rules
+تنظیم قوانین گروه
 
 !set about [text]
-Set [text] as about
+تنظیم درباره گروه :|
 
 !settings
-Returns group settings
+گرفتن تنظیمات گروه
 
 !newlink
-Create/revoke your group link
+ساخت لینک جدید
 
 !link
-Returns group link
+گرفتن لینک
 
 !owner
-Returns group owner id
+دیدن ایدی اونر گروه
 
 !setowner [id]
-Will set id as owner
+تنظیم اونر
 
 !setflood [value]
-Set [value] as flood sensitivity
+تنظیم حساسیت اسپم
 
-!stats
-Simple message statistics
-
-!save [value] [text]
-Save [text] as [value]
-
-!get [value]
-Returns text of [value]
 
 !clean [modlist|rules|about]
 Will clear [modlist|rules|about] and set it to nil
 
 !res [username]
-Returns user id
-
-!log
-Will return group logs
+گرفتن ایدی شخصی که توی گروه نیس :|
 
 !banlist
-Will return group ban list
+لیست بن شده های گروه
 
-» U can use both "/" and "!" 
-
-» Only mods, owner and admin can add bots in group
-
-» Only moderators and owner can use kick,ban,unban,newlink,link,setphoto,setname,lock,unlock,set rules,set about and settings commands
-
-» Only owner can use res,setowner,promote,demote and log commands
-
+Ninja Tg BoT 
+Sudo : @NinjaHacker
 ]]
   }
   serialize_to_file(config, './data/config.lua')
